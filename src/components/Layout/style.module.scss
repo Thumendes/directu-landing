@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  background-color: $dark;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  > div {
+    width: 100%;
+
+    max-width: $max-size;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      width: 4rem;
+    }
+    ul {
+      display: flex;
+      gap: 2rem;
+      li {
+        color: #a3a3a5;
+        transition: 250ms;
+        &:hover {
+          color: #fff;
+        }
+      }
+      .signin {
+        color: $primary;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+.footer {
+}
+.main {
+  > div {
+    width: 100%;
+    max-width: $max-size;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4.5rem;
+  min-height: 100vh;
+  background-color: $dark;
+}
