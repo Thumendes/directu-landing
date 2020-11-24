@@ -8,7 +8,7 @@ const Modal = ({ setModal }) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await Axios.post("http://localhost:3001/auth/signup", form);
+    await Axios.post("https://directu-backend.herokuapp.com/auth/signup", form);
   };
 
   return (
