@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.scss";
 import { FiCheck } from "react-icons/fi";
 import { useState } from "react";
 import Modal from "../components/Modal";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [modal, setModal] = useState(false);
@@ -22,7 +23,11 @@ export default function Home() {
         </header>
 
         <section className={styles.example1}>
-          <img src="/example1.png" alt="Directu" />
+          <motion.img
+            src="/example1.png"
+            alt="Directu"
+            whileHover={{ scale: 1.05 }}
+          />
         </section>
 
         <section className={styles.section}>
@@ -93,7 +98,7 @@ export default function Home() {
           </div>
         </section>
 
-        {modal && <Modal setModal={setModal} />}
+        <Modal setOpen={setModal} isOpen={modal} />
       </Layout>
     </>
   );
